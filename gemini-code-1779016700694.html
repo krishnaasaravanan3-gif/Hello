@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tam Tam - Parramatta Street Food Soul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0c0907;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section Wrap */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 85vh;
+            /* Using a dark gradient overlay to mimic the moody, dim background lighting in the image */
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(12, 9, 7, 1)), 
+                        url('https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            color: #ff2a00;
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #e5a93c;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        .btn-order {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 22px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-order:hover {
+            background-color: #cc0000;
+        }
+
+        /* Hero Content (Main Typography) */
+        .hero-content {
+            margin-top: 40px;
+            margin-bottom: 60px;
+            max-width: 800px;
+        }
+        .title-line {
+            font-family: 'Oswald', sans-serif;
+            font-size: 95px;
+            font-weight: 700;
+            line-height: 0.9;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: -2px;
+        }
+        .title-yellow {
+            color: #fab818;
+        }
+        .title-red {
+            color: #ff1e00;
+            /* Subtle glow effect matching the screenshot */
+            text-shadow: 0 0 20px rgba(255, 30, 0, 0.6); 
+        }
+        .hero-subtitle {
+            margin-top: 25px;
+            color: #a37a58;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+        .rating-star {
+            color: #fab818;
+        }
+
+        /* Menu Grid Section */
+        .menu-section {
+            background-color: #0c0907;
+            padding: 0 50px 60px 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+        }
+        .menu-item {
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            padding-left: 20px;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+        .item-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #fab818;
+            font-style: italic;
+        }
+        .item-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: #ff1e00;
+            font-weight: 700;
+        }
+        .item-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .item-description {
+            color: #665241;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .menu-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .title-line {
+                font-size: 65px;
+            }
+            .hero-section {
+                padding: 20px 25px;
+            }
+            .menu-section {
+                padding: 40px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <header>
+            <div class="logo">Tam Tam</div>
+            <nav>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#location" class="nav-link">Location</a>
+                <button class="btn-order">Order Online</button>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <h1 class="title-line title-yellow">Parramatta</h1>
+            <h1 class="title-line title-red">Street Food</h1>
+            <h1 class="title-line title-yellow">Soul</h1>
+            
+            <p class="hero-subtitle">
+                Authentic Vietnamese Soul Food in the Heart of the West.<br>
+                4.6<span class="rating-star">★</span> From 446 Reviews.
+            </p>
+        </div>
+    </div>
+
+    <section class="menu-section" id="menu">
+        <div class="menu-item">
+            <div class="menu-item-header">
+                <span class="item-number">01</span>
+                <span class="item-price">$19.50</span>
+            </div>
+            <h3 class="item-title">Rare Beef Pho</h3>
+            <p class="item-description">24-hour broth, rare beef slices, fresh herbs, rice noodles</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-header">
+                <span class="item-number">02</span>
+                <span class="item-price">$22.00</span>
+            </div>
+            <h3 class="item-title">Crispy Skin Chicken Noodle</h3>
+            <p class="item-description">Dry egg noodle with fried egg & soup on side</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-header">
+                <span class="item-number">03</span>
+                <span class="item-price">$24.00</span>
+            </div>
+            <h3 class="item-title">Wagyu Brisket Pho</h3>
+            <p class="item-description">Premium wagyu, rich marrow broth, hand-cut noodles</p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Alert user when clicking Order Online
+            $('.btn-order').on('click', function() {
+                alert('Redirecting to online ordering system...');
+            });
+
+            // Smooth scrolling for navigation links
+            $('.nav-link').on('click', function(e) {
+                if (this.hash !== "") {
+                    e.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 600);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
